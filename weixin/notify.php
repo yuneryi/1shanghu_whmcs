@@ -6,7 +6,7 @@ include("../../../includes/functions.php");
 include("../../../includes/gatewayfunctions.php");
 include("../../../includes/invoicefunctions.php");
 
-require_once "Eshanghu.php";
+require_once "Yuneryi.php";
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 
@@ -24,7 +24,7 @@ $wxconfig['mch_id'] = $GATEWAY['mch_id'];
 $wxconfig['app_secret'] = $GATEWAY['app_secret'];
 $wxconfig['notify'] = '';
 
-$wxpay = new Eshanghu($wxconfig);
+$wxpay = new Yuneryi($wxconfig);
 
 if(count($_POST) < 1){
 	exit;
