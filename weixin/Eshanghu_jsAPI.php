@@ -20,7 +20,7 @@ class Eshanghu_jsAPI {
     *
     */
     public function getOpenIDUrl($url, $appkey, $sub_mch_id){
-        return "https://1shanghu.com/v2/wechat/login?app_key=" . $appkey . "&sub_mch_id=" . $sub_mch_id . "&callback=" . $url;
+        return "https://www.yuneryi.com/v2/wechat/login?app_key=" . $appkey . "&sub_mch_id=" . $sub_mch_id . "&callback=" . $url;
     }
 
     /**
@@ -48,7 +48,7 @@ class Eshanghu_jsAPI {
         ];
         $data['sign'] = $this->getSign($data);
 
-        $response = $this->httpPost('https://1shanghu.com/api/wechat/mp', $data);
+        $response = $this->httpPost('https://www.yuneryi.com/api/wechat/mp', $data);
         $response = json_decode($response, true);
         return $response;
     }
