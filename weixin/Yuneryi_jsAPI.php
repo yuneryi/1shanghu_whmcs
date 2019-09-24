@@ -1,6 +1,6 @@
 <?php
 
-class Eshanghu_jsAPI {
+class Yuneryi_jsAPI {
     public $appKey;
     public $appSecret;
     public $subMchId;
