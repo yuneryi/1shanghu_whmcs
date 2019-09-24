@@ -38,7 +38,7 @@ class Eshanghu {
         ];
         $data['sign'] = $this->getSign($data);
 
-        $response = $this->httpPost('https://1shanghu.com/api/wechat/native', $data);
+        $response = $this->httpPost('https://www.yuneryi.com/api/wechat/native', $data);
         $response = json_decode($response, true);
         return $response;
     }
@@ -105,7 +105,7 @@ class Eshanghu {
         ];
         $data['sign'] = $this->getSign($data);
 
-        $response = $this->httpPost('https://1shanghu.com/api/wechat/refund', $data);
+        $response = $this->httpPost('https://www.yuneryi.com/api/wechat/refund', $data);
         $response = json_decode($response, true);
         return $response;
     }
