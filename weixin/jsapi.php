@@ -1,6 +1,6 @@
 <?php
 //$openidurl = $systemurl . "/modules/gateways/weixin/jsapi.php?invoiceid=" . $invoiceid . "&sign=" . weixin_safetyCheck("", array( $invoiceid ), true, $timestamp) . "&timestamp=" . $timestamp;
-require_once "Eshanghu_jsAPI.php";
+require_once "Yuneryi_jsAPI.php";
 require_once(__DIR__ . "/../../../init.php");
 require_once(__DIR__ . "/../../../includes/gatewayfunctions.php");
 require_once(__DIR__ . "/../../../includes/invoicefunctions.php");
@@ -31,8 +31,8 @@ if(isset($_GET["openid"]) && isset($_GET["data"])){
                 $wxconfig['mch_id'] = $GATEWAY['mch_id'];
                 $wxconfig['app_secret'] = $GATEWAY['app_secret'];
                 $wxconfig['notify'] = $GATEWAY["systemurl"] . "modules/gateways/weixin/notify.php";
-                $eshanghu = new Eshanghu_jsAPI($wxconfig);
-                $result = $eshanghu->create(mt_rand(10000, 99999) . $invoiceid, $body, $total, $_GET["openid"]);
+                $yuneryi = new Yuneryi_jsAPI($wxconfig);
+                $result = $yuneryi->create(mt_rand(10000, 99999) . $invoiceid, $body, $total, $_GET["openid"]);
                 if($result["code"] == 200)
                 {   
                     echo('
