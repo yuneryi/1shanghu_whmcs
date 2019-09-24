@@ -1,6 +1,6 @@
 <?php
 
-class Eshanghu {
+class Yuneryi {
     public $appKey;
     public $appSecret;
     public $subMchId;
